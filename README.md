@@ -1,31 +1,3 @@
-<h1 align="center">
-  <a href="https://testingjavascript.com/courses/javascript-mocking-fundamentals">JavaScript Mocking Fundamentals</a>
-</h1>
-
-<div align="center">
-  <h2><a href="https://testingjavascript.com">TestingJavaScript.com</a></h2>
-  <a href="https://testingjavascript.com">
-    <img
-      width="500"
-      alt="Learn the smart, efficient way to test any JavaScript application."
-      src="https://kentcdodds.com/images/testingjavascript-promo/tjs-4.jpg"
-    />
-  </a>
-</div>
-
-<hr />
-
-<p align="center" style="font-size: 1.2rem;">
-  Learn how mocking in JavaScript tests works by implementing them from scratch!
-</p>
-
-<hr />
-
-In this material, we have a set of `no-framework` tests that correspond to a set
-of jest tests (in the `__tests__` directory). The idea is that (with the
-exception of the first test), you look at the jest version first, then see how
-that would be implemented without a testing framework.
-
 Order of material:
 
 1.  `monkey-patching.js` (no jest version)

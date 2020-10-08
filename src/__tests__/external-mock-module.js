@@ -9,26 +9,23 @@
  * Execute: Use `npx jest --watch src/__tests__/external-mock-module.js` to watch the test
  */
 
-const thumbWar = require('../thumb-war')
-const utilsMock = require('../utils')
+const thumbWar = require('../thumb-war');
+const utilsMock = require('../utils');
 
-jest.mock('../utils', () => {
-  return {
-    getWinner: jest.fn((p1, p2) => p1),
-  }
-})
+// jest pickup automatically the mocked function in __mocks__ folder
+jest.mock('../utils');
 
 test('returns winner', () => {
-  const winner = thumbWar('Kent C. Dodds', 'Ken Wheeler')
-  expect(winner).toBe('Kent C. Dodds')
+  const winner = thumbWar('Kent C. Dodds', 'Ken Wheeler');
+  expect(winner).toBe('Kent C. Dodds');
   expect(utilsMock.getWinner.mock.calls).toEqual([
     ['Kent C. Dodds', 'Ken Wheeler'],
     ['Kent C. Dodds', 'Ken Wheeler'],
-  ])
+  ]);
 
   // cleanup
-  utilsMock.getWinner.mockReset()
-})
+  utilsMock.getWinner.mockReset();
+});
 
 /**
  * Hints:
